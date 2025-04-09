@@ -3,6 +3,9 @@
 import React from 'react';
 import { StyleSheet, View,Text, Image } from 'react-native';
 import Logo from "../assets/images/logo_dark.png"
+import { Link } from 'expo-router';
+
+
 
 const Home = () => {
     return (
@@ -10,6 +13,7 @@ const Home = () => {
             <Image source={Logo} style={styles.img}/>
             <Text style={styles.title}>the number 1</Text>
             <Text style={{marginBottom:30, marginTop:10}}  > Reading List App</Text>
+            <Link href='/About'>About</Link>
 
            
         </View>
@@ -39,7 +43,15 @@ const styles = StyleSheet.create({
 
     },
 
-   
+    // card:{
+    //     backgroundColor:"#eee",
+    //     padding:20,
+    //     borderRadius:5,
+    //     boxShadow:'4px 4px rgba(0,0,0,0.1)'
+
+
+
+    // },
 })
 
 export default Home;
