@@ -39,15 +39,7 @@ const styles = StyleSheet.create({
 
     },
 
-    // card:{
-    //     backgroundColor:"#eee",
-    //     padding:20,
-    //     borderRadius:5,
-    //     boxShadow:'4px 4px rgba(0,0,0,0.1)'
-
-
-
-    // },
+   
 })
 
 export default Home;
