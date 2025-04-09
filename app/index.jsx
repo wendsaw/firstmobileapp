@@ -1,14 +1,19 @@
 
 
 import React from 'react';
-import { StyleSheet, View,Text } from 'react-native';
+import { StyleSheet, View,Text, Image } from 'react-native';
+import Logo from "../assets/images/logo_dark.png"
 
 const Home = () => {
     return (
         <View style={styles.container}>
-            <Text>the number 1</Text>
-            <Text> Reading List App</Text>
+            <Image source={Logo} style={styles.img}/>
+            <Text style={styles.title}>the number 1</Text>
+            <Text style={{marginBottom:30, marginTop:10}}  > Reading List App</Text>
+
+           
         </View>
+       
     );
 }
 
@@ -20,6 +25,29 @@ const styles = StyleSheet.create({
         justifyContent:'center'
 
     },
+    title:{
+
+        fontWeight:"bold",
+        fontSize:18
+
+    },
+
+    img:{
+
+        marginVertical:20
+
+
+    },
+
+    // card:{
+    //     backgroundColor:"#eee",
+    //     padding:20,
+    //     borderRadius:5,
+    //     boxShadow:'4px 4px rgba(0,0,0,0.1)'
+
+
+
+    // },
 })
 
 export default Home;
