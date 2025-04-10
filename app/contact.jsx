@@ -3,10 +3,10 @@ import React from 'react';
 import { StyleSheet, View,Text } from 'react-native';
 import {Link} from 'expo-router'
 
-const About = () => {
+const Contact = () => {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>About page </Text>
+            <Text style={styles.title}>Contact us </Text>
             <Link href="/" style={styles.link}>back home</Link>
 
         </View>
@@ -41,4 +41,4 @@ link:{
 
 })
 
-export default About;
+export default Contact;

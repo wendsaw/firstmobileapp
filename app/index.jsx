@@ -7,15 +7,17 @@ import { Link } from 'expo-router';
 
 
 
-const Home = () => {
+const Home= () => {
+
     return (
+
         <View style={styles.container}>
             <Image source={Logo} style={styles.img}/>
             <Text style={styles.title}>the number 1</Text>
             <Text style={{marginBottom:30, marginTop:10}}  > Reading List App</Text>
-            <Link href='/About'>About</Link>
+            <Link href="/about" style={styles.link}>About Page</Link>
+            <Link href="/contact" style={styles.link}>Contact Page</Link>
 
-           
         </View>
        
     );
@@ -42,6 +44,12 @@ const styles = StyleSheet.create({
 
 
     },
+
+    link:{
+
+        marginVertical:10,
+        borderBottomWidth:1
+    }
 
     // card:{
     //     backgroundColor:"#eee",
