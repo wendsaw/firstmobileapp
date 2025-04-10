@@ -12,6 +12,7 @@ const Home= () => {
     return (
 
         <View style={styles.container}>
+            
             <Image source={Logo} style={styles.img}/>
             <Text style={styles.title}>the number 1</Text>
             <Text style={{marginBottom:30, marginTop:10}}  > Reading List App</Text>
