@@ -4,6 +4,8 @@ import React from 'react';
 import { StyleSheet, View,Text, Image } from 'react-native';
 import Logo from "../assets/images/logo_dark.png"
 import { Link } from 'expo-router';
+import ThemedView from '../components/ThemedView';
+import ThemeLogo from '../components/ThemeLogo';
 
 
 
@@ -11,15 +13,15 @@ const Home= () => {
 
     return (
 
-        <View style={styles.container}>
+        <ThemedView style={styles.container}>
             
-            <Image source={Logo} style={styles.img}/>
+            <ThemeLogo  style={styles.img}/>
             <Text style={styles.title}>the number 1</Text>
             <Text style={{marginBottom:30, marginTop:10}}  > Reading List App</Text>
             <Link href="/about" style={styles.link}>About Page</Link>
             <Link href="/contact" style={styles.link}>Contact Page</Link>
 
-        </View>
+        </ThemedView>
        
     );
 }
