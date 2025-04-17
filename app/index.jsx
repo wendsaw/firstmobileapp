@@ -26,11 +26,11 @@ const Home= () => {
             <ThemeText > Reading List App</ThemeText>
             <Spacer/>
 
-            <Link href="/about" style={styles.link}>
-             <ThemeText>About Page</ThemeText>
+            <Link href="/login" style={styles.link}>
+             <ThemeText>login</ThemeText>
             </Link>
-            <Link href="/contact" style={styles.link}>
-             <ThemeText>Contact Page</ThemeText>
+            <Link href="/register" style={styles.link}>
+             <ThemeText>register page</ThemeText>
             </Link>
 
         </ThemedView>
