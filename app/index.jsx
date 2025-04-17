@@ -1,11 +1,12 @@
 
 
 import React from 'react';
-import { StyleSheet, View,Text, Image } from 'react-native';
-import Logo from "../assets/images/logo_dark.png"
+import { StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
 import ThemedView from '../components/ThemedView';
 import ThemeLogo from '../components/ThemeLogo';
+import Spacer from '../components/Spacer';
+import ThemeText from '../components/ThemeText';
 
 
 
@@ -15,11 +16,22 @@ const Home= () => {
 
         <ThemedView style={styles.container}>
             
-            <ThemeLogo  style={styles.img}/>
-            <Text style={styles.title}>the number 1</Text>
-            <Text style={{marginBottom:30, marginTop:10}}  > Reading List App</Text>
-            <Link href="/about" style={styles.link}>About Page</Link>
-            <Link href="/contact" style={styles.link}>Contact Page</Link>
+            <ThemeLogo />
+            <Spacer height={20}/>
+            <ThemeText style={styles.title} title={true}>
+                the number 1
+            </ThemeText>
+
+            <Spacer height={10}/>
+            <ThemeText > Reading List App</ThemeText>
+            <Spacer/>
+
+            <Link href="/about" style={styles.link}>
+             <ThemeText>About Page</ThemeText>
+            </Link>
+            <Link href="/contact" style={styles.link}>
+             <ThemeText>Contact Page</ThemeText>
+            </Link>
 
         </ThemedView>
        
@@ -41,28 +53,18 @@ const styles = StyleSheet.create({
 
     },
 
-    img:{
-
-        marginVertical:20
-
-
-    },
-
+    
     link:{
 
         marginVertical:10,
         borderBottomWidth:1
     }
 
-    // card:{
-    //     backgroundColor:"#eee",
-    //     padding:20,
-    //     borderRadius:5,
-    //     boxShadow:'4px 4px rgba(0,0,0,0.1)'
+    
 
 
 
-    // },
+    
 })
 
 export default Home;
