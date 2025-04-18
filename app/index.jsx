@@ -1,5 +1,8 @@
 
 
+
+
+
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
@@ -7,7 +10,6 @@ import ThemedView from '../components/ThemedView';
 import ThemeLogo from '../components/ThemeLogo';
 import Spacer from '../components/Spacer';
 import ThemeText from '../components/ThemeText';
-
 
 
 const Home= () => {
@@ -59,10 +61,6 @@ const styles = StyleSheet.create({
         marginVertical:10,
         borderBottomWidth:1
     }
-
-    
-
-
 
     
 })
