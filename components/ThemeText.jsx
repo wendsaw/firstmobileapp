@@ -13,10 +13,10 @@ const ThemeText = ({style, title= false, ...props}) => {
 
     return (
 
-        <Text  
-        style={[{color:textColor}, style]}
-        {...props}
-        />
+        <Text style={[{ color: textColor }, style]} {...props}>
+  {props.children}
+</Text>
+
 
      
     );
@@ -26,3 +26,4 @@ const ThemeText = ({style, title= false, ...props}) => {
 
 
 export default ThemeText;
+

@@ -1,68 +1,58 @@
+import { StyleSheet } from 'react-native'
+import { Link } from 'expo-router'
 
+import ThemedView from "../components/ThemedView"
+import ThemeText from "../components/ThemeText"
+import ThemeLogo from "../components/ThemeLogo"
+import Spacer from "../components/Spacer"
+import { Colors } from '../constants/Colors'
 
+const Home = () => {
 
+  return (
+    <ThemedView style={styles.container}>
+      <ThemeLogo />
+      <Spacer />
 
+      <ThemeText style={styles.title} title={true}>The Number 1</ThemeText>
 
-import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Link } from 'expo-router';
-import ThemedView from '../components/ThemedView';
-import ThemeLogo from '../components/ThemeLogo';
-import Spacer from '../components/Spacer';
-import ThemeText from '../components/ThemeText';
+      <ThemeText style={{ marginTop: 10, marginBottom: 30 }}>
+        Reading List App
+      </ThemeText>
 
+      <Link href="/login" style={styles.link}>
+        <ThemeText>Login</ThemeText>
+      </Link>
 
-const Home= () => {
+      <Link href="/register" style={styles.link}>
+        <ThemeText>Register</ThemeText>
+      </Link>
 
-    return (
+      <Link href="/profile" style={styles.link}>
+        <ThemeText>Profile</ThemeText>
+      </Link>
 
-        <ThemedView style={styles.container}>
-            
-            <ThemeLogo />
-            <Spacer height={20}/>
-            <ThemeText style={styles.title} title={true}>
-                the number 1
-            </ThemeText>
-
-            <Spacer height={10}/>
-            <ThemeText > Reading List App</ThemeText>
-            <Spacer/>
-
-            <Link href="/login" style={styles.link}>
-             <ThemeText>login</ThemeText>
-            </Link>
-            <Link href="/register" style={styles.link}>
-             <ThemeText>register page</ThemeText>
-            </Link>
-
-        </ThemedView>
-       
-    );
+    </ThemedView>
+  )
 }
 
+export default Home
+
 const styles = StyleSheet.create({
-    container:{
-
-        flex:1,
-        alignItems:'center',
-        justifyContent:'center'
-
-    },
-    title:{
-
-        fontWeight:"bold",
-        fontSize:18
-
-    },
-
-    
-    link:{
-
-        marginVertical:10,
-        borderBottomWidth:1
-    }
-
-    
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  img: {
+    marginVertical: 20
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  link: {
+    marginVertical: 10,
+    borderBottomWidth: 1
+  },
 })
-
-export default Home;
