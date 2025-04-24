@@ -15,7 +15,6 @@ const RootLayout = () => {
 
     const theme=Colors[colorScheme]?? Colors.light
     
-    
 
     return (
 

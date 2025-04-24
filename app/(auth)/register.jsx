@@ -9,15 +9,28 @@ import Spacer from '../../components/Spacer'
 import ThemeButton from '../../components/ThemeButton'
 import ThemedTextInput from '../../components/ThemedTextInput'
 import { useState } from 'react'
+import {useUser} from '../../hooks/useUser'
 
 const Register = () => {
 
   const [email ,SetEmail]=useState('')
   const [password ,SetPassword]=useState('')
 
+  const { user,register}=useUser()
 
   const handleSubmit = async () => {
-    console.log('register form submitted', email,password)
+
+    try {
+
+      
+      await register(email,password)
+     
+     
+      
+    } catch (error) {
+      
+    }
+    
   }
 
   return (
