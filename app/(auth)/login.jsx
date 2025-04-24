@@ -2,19 +2,31 @@ import { Keyboard, Pressable, StyleSheet, Text, TextInput, TouchableWithoutFeedb
 import { Link } from 'expo-router'
 import { Colors } from '../../constants/Colors'
 
+
+
+
+
 import ThemedView from '../../components/ThemedView'
 import ThemeText from '../../components/ThemeText'
 import Spacer from '../../components/Spacer'
 import ThemeButton from '../../components/ThemeButton'
 import ThemedTextInput from '../../components/ThemedTextInput'
 import { useState } from 'react'
+import { useUser } from '../../hooks/useUser'
+
+
 
 const Login = () => {
 
   const [email ,SetEmail]=useState('')
   const [password ,SetPassword]=useState('')
 
+  const {user}=useUser()
+
   const handleSubmit = async () => {
+
+    console.log('current user',user);
+    
     console.log('login form submitted', email,password)
   }
 
