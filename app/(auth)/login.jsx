@@ -1,4 +1,4 @@
-import { Keyboard, Pressable, StyleSheet, Text, TextInput, TouchableWithoutFeedback } from 'react-native'
+import { ActivityIndicator, Keyboard, Pressable, StyleSheet, Text, TextInput, TouchableWithoutFeedback } from 'react-native'
 import { Link } from 'expo-router'
 import { Colors } from '../../constants/Colors'
 
@@ -82,6 +82,7 @@ const Login = () => {
           Register instead
         </ThemeText>
       </Link>
+      <ActivityIndicator size='large' color='white' />
 
     </ThemedView>
     </TouchableWithoutFeedback>

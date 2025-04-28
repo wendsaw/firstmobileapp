@@ -8,14 +8,14 @@ const UserOnly = ({ children }) => {
   const router = useRouter()
   
   useEffect(() => {
-    if (!authChecked && user === null) {
+    if (authChecked && user === null) {
       router.replace("/login")
     }
   }, [user, authChecked])
 
 
   // show loader while we wait for auth to be checked, or while redirecting if user becomes null
-  if (authChecked || ! user) {
+  if (!authChecked || !user) {
     return (
       <Text>Loading</Text>
     )
