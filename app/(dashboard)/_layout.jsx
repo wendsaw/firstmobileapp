@@ -10,6 +10,7 @@ import React from 'react';
 import { StyleSheet, useColorScheme} from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import {Ionicons} from '@expo/vector-icons'
+import UserOnly from '../../components/auth/UserOnly';
 
 
 
@@ -20,6 +21,8 @@ const DashboardLayout = () => {
 
 
     return (
+
+      <UserOnly>
 
         <Tabs
         screenOptions={{headerShown:false, 
@@ -62,6 +65,8 @@ const DashboardLayout = () => {
            
            
         </Tabs>
+
+        </UserOnly>
 
         
     );
