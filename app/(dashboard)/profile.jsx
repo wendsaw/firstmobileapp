@@ -10,12 +10,12 @@ import ThemeButton from '../../components/ThemeButton'
 
 const Profile = () => {
 
-  const {logout}=useUser()
+  const {logout, user}=useUser()
   return (
     <ThemedView style={styles.container}>
 
       <ThemeText title={true} style={styles.heading}>
-        Your Email
+           {user.email}
       </ThemeText>
       <Spacer />
 
