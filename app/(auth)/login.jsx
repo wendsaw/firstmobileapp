@@ -16,6 +16,7 @@ import { useUser } from '../../hooks/useUser'
 
 
 
+
 const Login = () => {
 
   const [email ,SetEmail]=useState('')
@@ -82,7 +83,7 @@ const Login = () => {
           Register instead
         </ThemeText>
       </Link>
-      <ActivityIndicator size='large' color='white' />
+      
 
     </ThemedView>
     </TouchableWithoutFeedback>
